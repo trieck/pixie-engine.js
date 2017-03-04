@@ -8,7 +8,10 @@
     "url": "https://github.com/trieck/pixie-engine.js.git"
   },
   "dependencies": {
-    "tmp": "latest"
+    "tmp": "^0.0.31",
+    "commander": "^2.9.0",
+    "sprintf-js": "^1.0.3",
+    "sleep": "latest"
   }
 }
 
