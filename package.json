@@ -1,0 +1,14 @@
+{
+  "name": "pixie-engine.js",
+  "version": "0.0.1",
+  "description": "Pixie Search Engine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trieck/pixie-engine.js.git"
+  },
+  "dependencies": {
+    "tmp": "latest"
+  }
+}
+
