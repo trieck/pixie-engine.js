@@ -2,31 +2,31 @@
 
 'use strict';
 
-let pkg = require('./package.json'),
+const pkg = require('./package.json'),
 	program = require('commander'),
 	path = require('path'),
 	sleep = require('sleep').msleep,
-	Timer = require('./lib/timer');
+	Timer = require('./lib/timer'),
+	JSONIndexer = require('./lib/json_index');
 
-let scriptName = path.basename(__filename);
+const scriptName = path.basename(__filename);
 
 program.version(`Pixie Index ${pkg.version}`)
 	.parse(process.argv);
 
 if (process.argv.length < 3) {
-	process.stderr.write(`usage: ${scriptName} database fields\n`);
+	process.stderr.write(`usage: ${scriptName} database\n`);
 	process.exit(1);
 }
 
 let timer = new Timer();
 
 try {
-
+	let index = new JSONIndexer();
+	index.load(process.argv[2]);
 } catch (e) {
-	process.stderr.write(e);
+	process.stderr.write(e.toString());
 	process.exit(1);
 }
 
-sleep(5000);
-
-console.log(`   ${timer}`);
+console.log(`   elapsed time: ${timer}`);
