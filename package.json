@@ -11,8 +11,7 @@
     "tmp": "^0.0.31",
     "commander": "^2.9.0",
     "sprintf-js": "^1.0.3",
-    "sleep": "latest",
-    "string-io": "1.0.3"
+    "sleep": "latest"
   }
 }
 
