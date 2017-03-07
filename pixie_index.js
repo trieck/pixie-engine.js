@@ -5,7 +5,6 @@
 const pkg = require('./package.json'),
 	program = require('commander'),
 	path = require('path'),
-	sleep = require('sleep').msleep,
 	Timer = require('./lib/timer'),
 	JSONIndexer = require('./lib/json_index');
 
